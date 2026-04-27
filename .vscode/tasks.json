@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Django server",
+			"type": "shell",
+			"command": "source octofit-tracker/backend/venv/Scripts/activate && python octofit-tracker/backend/manage.py runserver 0.0.0.0:8000",
+			"args": [],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run Django server (Windows)",
+			"type": "shell",
+			"command": "octofit-tracker/backend/venv/Scripts/activate.ps1; python octofit-tracker/backend/manage.py runserver 0.0.0.0:8000",
+			"args": [],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
