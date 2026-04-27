@@ -26,10 +26,15 @@ SECRET_KEY = 'django-insecure-_f1#qo3z6l5f12mic&96afzrsk4fz#8nr8n&t89y8=pl%i4++$
 DEBUG = True
 
 import os
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ["*"]
 if os.environ.get('CODESPACE_NAME'):
     ALLOWED_HOSTS.append(f"{os.environ.get('CODESPACE_NAME')}-8000.app.github.dev")
 
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://127.0.0.1",
+    "http://localhost"
+]
 
 # Application definition
 
